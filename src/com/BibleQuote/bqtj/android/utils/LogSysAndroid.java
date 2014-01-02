@@ -1,6 +1,6 @@
 package com.BibleQuote.bqtj.android.utils;
 
-import com.BibleQuote.bqtj.utils.Log;
+import android.util.Log;
 import com.BibleQuote.bqtj.utils.ILogSys;
 
 /**
