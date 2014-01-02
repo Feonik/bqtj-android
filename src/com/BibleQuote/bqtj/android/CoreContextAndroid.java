@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.Environment;
 import com.BibleQuote.bqtj.CoreContext;
 import com.BibleQuote.bqtj.android.utils.UpdateManagerAndroid;
+import com.BibleQuote.bqtj.utils.DataConstants;
 import com.BibleQuote.bqtj.utils.UpdateManager;
 
 import java.io.File;
@@ -70,11 +71,11 @@ public final class CoreContextAndroid extends CoreContext {
 				.MEDIA_MOUNTED)
 
 				? Environment.getExternalStorageDirectory()
-						+ File.separator + CoreContext.APP_DIR_NAME
+						+ File.separator + DataConstants.APP_DIR_NAME
 
 				: Environment.getDataDirectory()
 						+ File.separator + "data"
-						+ File.separator + CoreContext.APP_PACKAGE_DIR_NAME;
+						+ File.separator + DataConstants.APP_PACKAGE_DIR_NAME;
 	}
 
 	@Override

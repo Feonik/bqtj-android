@@ -31,7 +31,7 @@ public class UpdateManagerAndroid extends UpdateManager {
 	}
 
 	private void saveBuiltInModule(String fileName, int rawId) throws IOException {
-		File moduleDir = new File(CoreContext.FS_MODULES_PATH);
+		File moduleDir = new File(DataConstants.FS_MODULES_PATH);
 		InputStream moduleStream = context.getResources().openRawResource(rawId);
 		OutputStream newModule = new FileOutputStream(new File(moduleDir, fileName));
 		byte[] buf = new byte[1024];
@@ -68,7 +68,7 @@ public class UpdateManagerAndroid extends UpdateManager {
 			}
 			BufferedReader tsk_br = new BufferedReader(isReader);
 
-			File tskFile = new File(CoreContext.APP_DATA_PATH, "tsk.xml");
+			File tskFile = new File(DataConstants.APP_DATA_PATH, "tsk.xml");
 			if (tskFile.exists()) {
 				tskFile.delete();
 			}
