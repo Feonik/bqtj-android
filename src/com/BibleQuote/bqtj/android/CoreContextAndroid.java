@@ -74,17 +74,15 @@ public final class CoreContextAndroid extends CoreContext {
 						+ File.separator + DataConstants.APP_DIR_NAME
 
 				: Environment.getDataDirectory()
-						+ File.separator + "data"
+						+ File.separator
+						// system name of dir /data/data  (2nd data)
+						+ "data"
 						+ File.separator + DataConstants.APP_PACKAGE_DIR_NAME;
 	}
 
 	@Override
-	public File getCacheDir() {
-
-		// TODO CacheDir to CoreContext
+	public File getSystemCacheDir() {
 		return context.getCacheDir();
-//	private static final String APP_CACHE_PATH = APP_DATA_PATH
-//			+ File.separator + "cache";
 	}
 
 }
