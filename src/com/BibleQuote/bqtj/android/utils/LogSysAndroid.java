@@ -10,7 +10,23 @@ import com.BibleQuote.bqtj.utils.ILogSys;
  * Time: 0:12
  * To change this template use File | Settings | File Templates.
  */
-public class LogSysAndroid implements ILogSys {
+public final class LogSysAndroid implements ILogSys {
+
+	private static LogSysAndroid logSysAndroid;
+
+
+	private LogSysAndroid() {
+	}
+
+	public static synchronized LogSysAndroid getLogSysAndroid() {
+
+		if (logSysAndroid == null) {
+			logSysAndroid = new LogSysAndroid();
+		}
+
+		return logSysAndroid;
+	}
+
 
 	public void d(String tag, String msg) {
 		Log.d(tag, msg);

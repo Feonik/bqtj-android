@@ -45,6 +45,9 @@ public class UpdateManagerAndroid extends UpdateManager {
 
 	@Override
 	protected void saveTSK() {
+
+		// TODO работа с TSK в DataConstants ?
+
 		try {
 			InputStream tskStream = context.getResources().openRawResource(R.raw
 					.tsk);
