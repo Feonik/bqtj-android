@@ -3,3 +3,8 @@
 /*.iml
 /bin
 /gen
+/.settings
+/.classpath
+/.project
+/project.properties
+/lint.xml
